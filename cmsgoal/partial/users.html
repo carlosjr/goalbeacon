@@ -1,0 +1,28 @@
+<div>
+  Clientes
+  <div ng-repeat="customer in customers track by customer.id">
+    {{customer.name}}
+  </div>
+</div>
+
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+  <input class="mdl-textfield__input" type="text" id="id-name-customer" ng-model="customer.name"/>
+  <label class="mdl-textfield__label" for="id-name-customer">Nome</label>
+</div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="id-email-customer" ng-model="customer.email"/>
+    <label class="mdl-textfield__label" for="id-email-customer">Username</label>
+    <span class="mdl-textfield__error">Only alphabet and no spaces, please!</span>
+  </div>
+
+<div class="md-form">
+          <i class="fa fa-envelope prefix"></i>
+          <input type="text" id="id-mobile-customer" class="form-control" ng-model="customer.mobile">
+          <label for="id-mobile-customer">Nome</label>
+</div>
+
+
+<div><button class="mdl-button mdl-button--fab mdl-button--colored" ng-click="salvarCliente()" ng-init="count=0"><i class="material-icons">backup</i></button></div>
+<div><button class="mdl-button mdl-js-button mdl-js-ripple-effect">Save</button></div>
